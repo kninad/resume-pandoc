@@ -1,5 +1,7 @@
 ---
 name: John Bokma
+title: John Bokma
+fontfamily: charter
 keywords: perl, modern perl, cpan, cgi, nginx, apache, algorithms,
     freelance, msc, senior perl developer, xml, xslt, mysql, crawling,
 	scraping, remote, parsing, plack, git, api, testing
@@ -324,3 +326,4 @@ Languages
 : Dutch (native), English (fluent).
 
 My [resume](http://castleamber.com/documents/perl-programmer-john-bokma-resume.pdf) (PDF)
+

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <meta name="keywords" content="perl, modern perl, cpan, cgi, nginx, apache, algorithms, freelance, msc, senior perl developer, xml, xslt, mysql, crawling, scraping, remote, parsing, plack, git, api, testing">
+  <title>John Bokma</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">body { font-family:Arial, Helvetica, sans-serif; }
+body { width: 75%; margin: auto; max-width: 1000px; margin-left:300px; padding-left: 40px;}
+body, p { font-size: 12pt; color: #222; }
+h1.title { font-size: 24pt; text-transform: uppercase ; color: #111 ; font-weight: normal;}
+h1, h2, h3 { font-family: 'Palatino', Georgia, Times, 'Times New Roman', serif }
+h1 { font-size: 1.4em; text-transform: normal; font-weight: bold; color: #00485c; margin-top: 1em; margin-bottom: .4em; border-bottom: 1px solid #444;
+}
+h2 { font-size: 1.1em; font-weight: bold;}
+p { margin: 0.7em 0 0 0; }
+ul { list-style: "-"; margin: 0.5em; padding-left: 1em; text-indent: -1em; padding-right: 2em; }
+li { padding-left: 1em; text-indent: -1em; padding-right: 2em;}
+a { text-decoration: none; border-bottom: 1px dashed #bbb; color: #000; }
+a:hover, #foot a:hover { color: #444; border-bottom: 1px dashed #444; }
+code { font-size: 10pt; background-color: #f4f4f4; padding: 2px; box-shadow: 1px 1px 2px #ddd; }
+#downloads { position: absolute; top: 1em; right: 1em; color: #777; font-style: italic; font-size: 0.8em; }
+#online_resume { display: none; }
+#clear_foot { height: 3em; }
+hr { display: none; }
+@media print {
+body { width: 92%; margin: auto; }
+h1 { font-size: 16pt; }
+h2 { font-size: 12pt; margin-top: 2em; }
+body, p, li { font-size: 10pt; }
+code {font-size: 8pt; background-color: #eee; padding: 2px;}
+hr { display: block; page-break-after: always; padding: 0; margin: 0; border: 0; }
+#downloads { display: none; }
+#online_resume { display: block; text-align: center; color: #777; font-style: italic; font-size: 10pt; }
+}
+
+#TOC {
+
+width: 300px; 
+position: fixed; 
+z-index: 1; 
+top: 0; 
+left: 0;
+background-color: #f6f6f6; 
+overflow-x: hidden; 
+padding-top: 10px;
+margin-top: 5px;
+}
+
+#TOC a {
+padding: 6px 8px 6px 16px;
+text-decoration: none;
+font-family: Helvetica, Arial sans-serif;
+font-size: 0.9em;
+color: #111111;
+display: block;
+}
+
+#TOC a:hover {
+color: #444444;
+text-decoration: underline;
+}
+</style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div id="downloads">
+  My resume was generated from markdown (via pandoc). Download it as 
+  <a href="resume.txt">TXT</a> or
+  <a href="resume.pdf">PDF</a> or
+  <a href="resume.docx">DOCX</a>
+</div>
+<header>
+<h1 class="title">John Bokma</h1>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#summary">Summary</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#experience-as-senior-perl-developer">Experience as Senior Perl Developer</a></li>
+<li><a href="#education">Education</a></li>
+<li><a href="#courses">Courses</a></li>
+<li><a href="#github">GitHub</a></li>
+<li><a href="#miscellaneous">Miscellaneous</a></li>
+</ul>
+</nav>
+<h1 id="summary">Summary</h1>
+<p>I am a freelance Senior Perl Developer with over 26 years’ experience, including exposure to web scraping, data wrangling, Git, MySQL, NGINX, Apache HTTP Server, Python, XSLT, XML, RelaxNG, HTML, and CSS.</p>
+<p>I’m an active proponent of Modern Perl. I like writing technical documentation and unit tests; both have saved my customers and I a lot of time over the years. I prefer to reuse tested code as much as possible, hence I often start a project with researching available solutions on CPAN.</p>
+<p>My personal development projects consist of several in-house tools, including a static website and blog generator using XML as input format. Currently, I am working on a new version using Markdown for input instead. I also wrote a small static microblog generator, which is available on GitHub in both a Perl and a Python version.</p>
+<h1 id="skills">Skills</h1>
+<h2 id="perl">Perl</h2>
+<dl>
+<dt>Web Scraping</dt>
+<dd><p>Over the years many projects I’ve been working on involved crawling, caching, parsing, and storing the desired result in a database. I like the challenges such projects offer, like making the web crawlers robust and be able to deal with the intricacies of the Internet and its data. Regarding the latter, this is why I prefer strict parsing of data, with many checks and extensive logging using Log::Log4perl and good test coverage. This way changes to the HTML of scraped web pages, which often occurs in my experience, are detected early and collecting invalid data or missing additional data might be avoided.</p>
+</dd>
+<dt>Parsing</dt>
+<dd><p>Besides parsing HTML I’ve also experience with parsing XML, several custom formats, and domain-specific languages (DSLs).</p>
+</dd>
+<dt>Data Wrangling</dt>
+<dd><p>Another task that often is assigned to me is the conversion of data from one format to another; including data cleaning and verification. For example, modifying the text output of a legacy application in such a way that the new output is suitable to be printed on redesigned labels. Often the input format has to be reverse engineered and documented; a challenge I like.</p>
+</dd>
+<dt>Testing</dt>
+<dd><p>I prefer to use extensive testing of the custom modules and scripts I write. My favorite module is Test::Most because the module provides the most commonly used testing functions with a single line, avoiding a lot of boilerplate.</p>
+</dd>
+</dl>
+<h2 id="systems-administration">Systems Administration</h2>
+<p>My main Perl development environment is currently Ubuntu 19.04 Disco Dingo running in a virtual machine on MacOS. I also use two different VPS providers for hosting my websites. I do the administration of each of those systems, e.g. updates, firewall rules, and other security related tasks, installing and configuring software e.g. Apache HTTP server, NGINX, Postfix, Dovecot, OpenSSH, and MySQL.</p>
+<h2 id="documentation">Documentation</h2>
+<p>I like to write technical documentation. I prefer to use markup languages like Org Mode (Emacs), Markdown, and LaTeX. The use of plain text makes version control and searching from the command line easily. Plain text also makes it very easy to generate code from the documentation and vice versa. Where required, PDF versions can be generated using tools like Emacs, Pandoc, and pdflatex.</p>
+<h2 id="remote-work">Remote Work</h2>
+<p>I exclusively work remotely. Over the past years, I have worked with customers in Japan, USA, The Netherlands, and Canada. Working from home provides me with a productive environment with a minimal number of interruptions. I use the Internet to stay in touch with peers and my craft. I prefer to communicate using email. I have experience with encrypted email using GnuPG, SSH with public key encryption, Git, Subversion, and Github.</p>
+<h2 id="other">Other</h2>
+<p>I would be happy to discuss my experience with and exposure to: Python, MySQL, XML, XSLT, XSL-FO, RelaxNG, Apache HTTP Server, NGINX, HTML, CSS, Search Engine Optimization (SEO).</p>
+<h1 id="experience-as-senior-perl-developer">Experience as Senior Perl Developer</h1>
+<h2 id="peppels.net">Peppels.net</h2>
+<p><strong>January 2019 - present</strong>; remote, part-time</p>
+<dl>
+<dt>Skills used:</dt>
+<dd><p>Modern Perl, Template::Toolkit, JavaScript, jQuery, MySQL, HTML, wkhtmltopdf, Sass, CSS3, git, make.</p>
+</dd>
+<dt>Role overview:</dt>
+<dd><ul>
+<li><p>Maintenance of existing code base.</p></li>
+<li><p>Turning graphic designs into responsive HTML and CSS3.</p></li>
+<li><p>Complete redesign of the existing login page for both mobile and desktop.</p></li>
+<li><p>Adding additional PDF printing support.</p></li>
+<li><p>Adding support for portfolio pages for both mobile and desktop.</p></li>
+<li><p>Testing and adjusting mobile design.</p></li>
+</ul>
+</dd>
+</dl>
+<h2 id="sf-metrics">SF Metrics</h2>
+<p><strong>August 2015 - present</strong>; remote, part-time</p>
+<dl>
+<dt>Skills used:</dt>
+<dd><p>Modern Perl, LWP::UserAgent, Log::Log4perl, Test::Most, Text::Diff, XML::Parser, DBI, Config::Tiny, Try::Tiny, Path::Tiny, Plack, JSON, git, MySQL, GitHub, Emacs Org Mode, Markdown, NGINX, SEO.</p>
+</dd>
+<dt>Role overview:</dt>
+<dd><ul>
+<li><p>Developed a program to import a “JSON per line” database dump into a MySQL database. I reverse engineered the file format, designed the 70+ MySQL database tables, and added logic to avoid duplicate code.</p></li>
+<li><p>Developed a web crawler that downloads XML data, verifies this data, gathers some statistics, and stores desired data and statistics in a MySQL database. I am also reponsible for writing all the technical documentation, specifications, and example SQL queries. (ongoing)</p></li>
+<li><p>Developed several tools for analyzing search engine result pages (SERPs) (ongoing)</p></li>
+<li><p>Porting Perl programs to the Go programming language. (ongoing)</p></li>
+<li><p>Developed modules for storing data in Amazon’s S3.</p></li>
+</ul>
+</dd>
+<dt>Interesting challenges:</dt>
+<dd><p>Because the web crawler program downloads data from the Internet it must be able to handle timeouts, partial downloads, etc. Moreover the XML parser must be able to distinguish between errors that can be safely ignored because they won’t affect the desired data much, and fatal errors. As a single crawl can gather a lot of data, hence the MySQL database must be designed to deal with querying tens of millions of rows of data in mind.</p>
+</dd>
+<dd>The database dump program required several refactoring steps to avoid code repetition. Great care had to be taken to verify the types of JSON data and to verify all IDs had the correct type and were matching up in the original dump.
+</dd>
+</dl>
+<h2 id="redsocks---malicious-threat-detection">RedSocks - Malicious Threat Detection</h2>
+<p><strong>February 2013 - December 2015</strong>; remote, part-time</p>
+<dl>
+<dt>Skills used:</dt>
+<dd><p>Modern Perl, LWP::UserAgent, Log::Log4perl, HTML::TreeBuilder, Test::Most, Test::More, Test::Output, JSON::XS, DBI, Try::Tiny, XML::Parser, XML::Writer, Email::Sender, Text::CSV_XS, MaxMind::DB::Reader, Dancer2, MySQL, RelaxNG, XSLT, Apache Ant, git, VirtualBox, NGINX, cron, Emacs Org Mode, OpenSSL, iptables, HTML, CSS, GNU Privacy Guard (GPG).</p>
+</dd>
+<dt>Role overview:</dt>
+<dd><ul>
+<li><p>Developed several web crawling Perl programs for gathering security related data, each crawler exporting downloaded data as a CSV file.</p></li>
+<li><p>Developed a Perl program that downloads security related data from several sources, verifies, cleans, normalizes the data, and export it as an XML file.</p></li>
+<li><p>Developed a Perl program that post-processes the exported XML data to remove duplicate entries and overlapping IP ranges using a binary search algorithm.</p></li>
+<li><p>Developed a Perl program that parses log files (Log4Perl) generated by aforementioned programs, creates reports, and emails those reports.</p></li>
+<li><p>Developed a Dancer2 web application to manually enter IP ranges and related security data and store this information into a MySQL database.</p></li>
+<li><p>Configured virtual machines for each of the Perl programs, including designing firewall rules, and allowing access via <code>rsync</code> and HTTPS in a secure manner where required. Documented the entire process of configuration and installation in great detail.</p></li>
+<li><p>Wrote documentation on how to create certificates to allow client side certificate authentication in NGINX (HTTPS), and configuring NGINX accordingly.</p></li>
+<li><p>Wrote extensive tests for all developed custom Perl modules and scripts.</p></li>
+<li><p>Designed file formats (XML, CSV). Documented each format in Org Mode format (Emacs).</p></li>
+<li><p>Designed Relax NG schemata to validate XML files.</p></li>
+<li><p>Wrote XSLT to transform XML output to older formats in order to support client programs that require an older format prior to being safely updated.</p></li>
+<li><p>Wrote extensive technical documentation in Org Mode format (Emacs).</p></li>
+</ul>
+</dd>
+<dt>Interesting challenges:</dt>
+<dd><p>Because the generated XML file is used in security related applications great care had to be taken to verify the integrity of the downloaded data and make sure that malformed data wouldn’t end up in the final XML file. Because the generated data is used in programs written and maintained by other programmers, clear specifications and well-written documentation was mandatory. In order to keep this documentation under version control Emacs’ Org Mode was used to write in plain text and convert it to, for example, PDF. Due to the asynchronous nature of the various programs care had to be taken to avoid race conditions.</p>
+</dd>
+</dl>
+<h1 id="education">Education</h1>
+<dl>
+<dt>TH “Rijswijk”, Rijswijk, The Netherlands</dt>
+<dd><p>Computer Science, BSc; 1991.</p>
+</dd>
+<dt>Utrecht University, Utrecht, The Netherlands</dt>
+<dd><p>Design of Algorithms, MSc; 1994. Thesis: “Constraint Satisfaction with Learning Automata.”</p>
+</dd>
+</dl>
+<h1 id="courses">Courses</h1>
+<dl>
+<dt>DelftX: FP101x Introduction to Functional Programming</dt>
+<dd><p>Functional Programming, Haskell, Monads; final grade: 98%; December 2014; <a href="https://courses.edx.org/courses/DelftX/FP101x/3T2014/info">course info</a>; <a href="https://s3.amazonaws.com/verify.edx.org/downloads/6d4d4270a06545ecbdc12f4a9c5cafa4/Certificate.pdf">verified certificate (PDF)</a>.</p>
+</dd>
+<dt>Introduction to Big Data with Apache Spark</dt>
+<dd><p>Apache Spark, Python, Vagrant; final grade: 100%; July 2015; <a href="https://courses.edx.org/courses/BerkeleyX/CS100.1x/1T2015/info">course info</a> ; <a href="https://s3.amazonaws.com/verify.edx.org/downloads/f94790bd236c48ca9e943fa50c5d8c48/Certificate.pdf">verified certificate (PDF)</a>.</p>
+</dd>
+<dt>Scalable Machine Learning</dt>
+<dd><p>Apache Spark, Python, Vagrant; final grade: 100%; August 2015; <a href="https://courses.edx.org/courses/BerkeleyX/CS190.1x/1T2015/info">course info</a> ; <a href="https://s3.amazonaws.com/verify.edx.org/downloads/90d3c61ff8bb49d080c914dbfa1aa1e7/Certificate.pdf">verified certificate (PDF)</a>.</p>
+</dd>
+</dl>
+<h1 id="github">GitHub</h1>
+<dl>
+<dt>tumblelog</dt>
+<dd><p>A static HTML5 microblog generator with support for RSS and JSON feeds written in Perl. A Python version with identical functionality is also available in the same repository: <a href="https://github.com/john-bokma/tumblelog">tumblelog</a>.</p>
+</dd>
+<dt>resume-pandoc</dt>
+<dd><p>LaTeX resume template for Pandoc based on a LaTeX resume by Jason R. Blevins. The template can be used to create either a LaTeX or PDF file given a Markdown file as input. The template was used to create this resume. Repository: <a href="https://github.com/john-bokma/resume-pandoc">resume-pandoc</a>.</p>
+</dd>
+</dl>
+<h1 id="miscellaneous">Miscellaneous</h1>
+<dl>
+<dt>Developing Web Applications with Apache, MySQL, memcached, and Perl</dt>
+<dd><p>Technical Editor; ISBN-13: 978-0470414644; 2009.</p>
+</dd>
+<dt>Modern Perl</dt>
+<dd><p>I did some voluntarily reviewing, and am listed in the Credits section. <a href="http://onyxneon.com/books/modern_perl/">Electronic versions</a>.</p>
+</dd>
+<dt>A Retrospective Study of Polyallergy as A Marker of Non-Epileptic Seizures in the Epilepsy Monitoring Unit</dt>
+<dd><p>I provided the Perl program used in this study; article in Psychosomatics 55(6); June 2014; <a href="https://www.researchgate.net/publication/262923044_A_Retrospective_Study_of_Polyallergy_as_A_Marker_of_Non-Epileptic_Seizures_in_the_Epilepsy_Monitoring_Unit">abstract</a>.</p>
+</dd>
+<dt>Optimization of molecular methods and statistical procedures for forensic fingerprinting of microbial soil communities</dt>
+<dd><p>I assisted with Perl programming; article in International Research Journal of Microbiology (IRJM); ISSN: 2141-5463; Vol. 3(11) pp. 363-372; November 2012; <a href="http://www.interesjournals.org/full-articles/optimization-of-molecular-methods-and-statistical-procedures-for-forensic-fingerprinting-of-microbial-soil-communities.pdf?view=inline">full length research paper (PDF)</a></p>
+</dd>
+<dt>Languages</dt>
+<dd><p>Dutch (native), English (fluent).</p>
+</dd>
+</dl>
+<p>My <a href="http://castleamber.com/documents/perl-programmer-john-bokma-resume.pdf">resume</a> (PDF)</p>
+</body>
+</html>

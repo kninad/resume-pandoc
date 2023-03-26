@@ -8,15 +8,20 @@
 
 \documentclass[$if(fontsize)$$fontsize$$else$10pt$endif$,letterpaper]{article}
 
+$if(fontfamily)$
+\usepackage[$for(fontfamilyoptions)$$fontfamilyoptions$$sep$,$endfor$]{$fontfamily$}
+$endif$
+
 \usepackage{hyperref}
 \usepackage{geometry}
 \usepackage{enumitem}
 \usepackage{underscore}
 \usepackage[parfill]{parskip}
-\usepackage{lmodern}
+% \usepackage{lmodern}
 \usepackage[svgnames]{xcolor}
 \usepackage[$if(fontenc)$$fontenc$$else$T1$endif$]{fontenc}
 \usepackage[utf8]{inputenc}
+\usepackage{titlesec}
 
 % Your name on the resume
 \def\name{$name$}
@@ -24,19 +29,20 @@
 % The following metadata will show up in the PDF properties
 \hypersetup{
   colorlinks = true,
-  urlcolor=$if(urlcolor)$$urlcolor$$else$blue$endif$,
-  linkcolor=$if(linkcolor)$$linkcolor$$else$magenta$endif$,  
+  urlcolor=$if(urlcolor)$$urlcolor$$else$[rgb]{0,0.3,0.5}$endif$,
+  linkcolor=$if(linkcolor)$$linkcolor$$else$[rgb]{0,0.3,0.5}$endif$,  
   pdfauthor = {\name},
   pdfkeywords = {$keywords$},
-  pdftitle = {\name: Curriculum Vitae},
+  pdftitle = {\name: CV},
   pdfsubject = {Curriculum Vitae},
   pdfpagemode = UseNone
 }
 
 \geometry{
-  body={6.5in, 9.0in},
-  left=1.0in,
-  top=1.0in
+  body={7in, 9.0in},
+  left=0.6in,
+  top=0.6in,
+  bottom=0.5in
 }
 
 % Fix  for "! Undefined control sequence. <recently read> \tightlist",
@@ -47,18 +53,18 @@
 
 % Page number is top right, and it is possible to control the rest of
 % the header.
-\pagestyle{myheadings}
-\markright{\name}
-\thispagestyle{empty}
+%\pagestyle{myheadings}
+%\markright{\name}
+%\thispagestyle{empty}
 
 % Custom section fonts
-\usepackage{sectsty}
-$if(section-color)$
-\sectionfont{\color{$section-color$}\sffamily\bfseries\Large}
-$else$
-\sectionfont{\rmfamily\mdseries\Large}
-$endif$
-\subsectionfont{\rmfamily\mdseries\itshape\large}
+%\usepackage{sectsty}
+%$if(section-color)$
+%\sectionfont{\color{$section-color$}\bfseries\Large}
+%$else$
+%\sectionfont{\rmfamily\mdseries\Large}
+%$endif$
+%\subsectionfont{\rmfamily\mdseries\itshape\large}
 
 % Section numbers or not (default)
 $if(numbersections)$
@@ -69,23 +75,41 @@ $endif$
 
 % By putting an empty \item[] at the start of the list, the list
 % starts on a new line.
-\setlist[itemize]{leftmargin=1em,label={--},before=\item[]}
+% ALSO customizing lists
+\setlist[itemize]{noitemsep,topsep=-8pt, leftmargin=1em,label={-},before=\item[]}
+\setlist[enumerate]{noitemsep,topsep=-8pt, leftmargin=2.5em,before=\item[]}
+
 
 \setlist[description]{leftmargin=0em, style=sameline}
 
 % Don't use monospace font for URLs
 \urlstyle{same}
 
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\Large
+}{}{0em}{}[\color{darkgray}\titlerule \vspace{-3pt}]
+
+\titleformat{\subsection}{
+  \vspace{0pt}\raggedright\bfseries
+}{}{0em}{}[\color{darkgray}\vspace{-3pt}]
+
+\pagestyle{empty} % No numbering
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+
 \begin{document}
 
 % Place name at left
 $if(name-color)$
-{\huge\color{$name-color$}\sffamily\bfseries \name}
+{\scshape \Huge\color{$name-color$}\bfseries \name}
 $else$
-{\huge \name}
+{ \scshape \Huge \name}
 $endif$
 
 \bigskip
+\vspace{-5pt}
 
 $if(left-column)$
 \begin{minipage}[t]{0.495\textwidth}
