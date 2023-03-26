@@ -4,8 +4,15 @@ Fork of John Bokma's [resume-pandoc](https://github.com/john-bokma/resume-pandoc
 repo for creating resume (pdf) using markdown. Now able to generate resume in
 pdf, txt, docx and html formats.
 
+Workflow:
+
+1. Edit the `resume.md` file and populate all the required details
+2. From the root level dir of the repo, just run `make all`
+3. Check the diffrernt resume formats in `output/` folder
+
 See the `Makefile` to get a basic idea about how each format's resume recipe
-looks like (which template files are used etc..)
+looks like (which template files are used etc..). If you dont have `make` on
+your OS, you can run the same commands directly via `pandoc` on command line. 
 
 `templates/` : contains the individual format's styling and templates.
 
