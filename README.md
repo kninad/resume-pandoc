@@ -1,10 +1,19 @@
 # resume-pandoc
 
 Generate your resume in different formats from a **single** markdown file via
-`pandoc`. See the `output/` folder for example outputs!
+`pandoc`! See the `output/` folder for example outputs (docx, pdf, html, txt).
+The key advantage I found is that generating text file from pdf (using `pdftotext`)
+gives out fairly decent and closely matching text output. Forked from John Bokma's
+[repo](https://github.com/john-bokma/resume-pandoc) with changes on styles for the 
+html, pdf, and docx outputs.
 
-Forked from John Bokma's [repo](https://github.com/john-bokma/resume-pandoc)
-with changes on styles for the html, pdf, and docx outputs.
+## Motivation
+I presume this could be useful for folks uploading the resume to online portals 
+which often perform this conversion in the backend. The docx file also serves
+this purpose whereas the html output can embedded into your personal website.
+Another advantage of the html output is higer control over the visual style and
+an alternate option to get pdf (if you dont care about how the text extracted from
+the pdf will look like!)
 
 ## Requirements
 
