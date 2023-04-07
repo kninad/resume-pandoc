@@ -1,7 +1,28 @@
 # resume-pandoc
 
+Generate your resume in different formats from a **single** markdown file via
+`pandoc`. See the `output/` folder for example outputs!
+
 Forked from John Bokma's [repo](https://github.com/john-bokma/resume-pandoc)
-with
+with changes on styles for the html, pdf, and docx outputs.
+
+## Requirements
+
+1. `pandoc`
+2. `latex` distribution for pdf
+3. `GNU make` (but not strictly required)
+
+Tested with `pando 2.5` and `texlive 2019` on Ubuntu 20.04. I assume this should
+still work on Mac and Windows by using the Makefile as a reference.
+
+## Using the repo
+
+1. Edit `resume.md` by adding in your details
+2. Create an `output/` directory
+3. Run `make all` in the repository root via command line
+4. To clean or remove generated files: `make clean`
+
+# Templates
 
 Templates for authoring a resume in pdf, txt, html and docx formats via a single
 markdown file.
@@ -11,10 +32,11 @@ markdown file.
 - docx: `templates/wordstyle.docx`
 - txt: plain text requires no template `:)`
 
-See the `Makefile` for recipes on how I generate the required files.
+**NOTE:** See the `Makefile` for recipes on how I generate the required files in
+case you don't have `make` installed on your system.
 
 
-## YAML Meta Block
+# YAML Meta Block
 
 name
  : the name on the resume.
