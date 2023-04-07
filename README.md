@@ -1,33 +1,17 @@
 # resume-pandoc
 
-Fork of John Bokma's [resume-pandoc](https://github.com/john-bokma/resume-pandoc)
-repo for creating resume (pdf) using markdown. Now able to generate resume in
-pdf, txt, docx and html formats.
+Forked from John Bokma's [repo](https://github.com/john-bokma/resume-pandoc)
+with
 
-Workflow:
+Templates for authoring a resume in pdf, txt, html and docx formats via a single
+markdown file.
 
-1. Edit the `resume.md` file and populate all the required details
-2. From the root level dir of the repo, just run `make all`
-3. Check the diffrernt resume formats in `output/` folder
+- html: header info via `templates/html/header.html` and style via `templates/html/style.css`
+- pdf (via latex): `templates/my_format.tex`
+- docx: `templates/wordstyle.docx`
+- txt: plain text requires no template `:)`
 
-See the `Makefile` to get a basic idea about how each format's resume recipe
-looks like (which template files are used etc..). If you dont have `make` on
-your OS, you can run the same commands directly via `pandoc` on command line. 
-
-`templates/` : contains the individual format's styling and templates.
-
-`output/` : where each of the resume files will be saved. See this folder for
-examples on how the outputs will look like!
-
-## Changes
-
-Key change is multi-format (pdf, txt, docx, html) output via the same markdown
-file.
-
-- Slight modifications to the latex template for the pdf output
-- Simple and clean `html` template
-- Very basic docx template, nothing fancy but good looking imo!
-- Also generates plain text version in case we need to copy paste during job applications! 
+See the `Makefile` for recipes on how I generate the required files.
 
 
 ## YAML Meta Block
@@ -65,12 +49,8 @@ numbersections
 
 # Credits
 
-- John Bokma for his repo! It was clear and easy to use/modify.
+- John Bokma's repo for [`resume-pandoc`](https://github.com/john-bokma/resume-pandoc)
 
-Earlier Credits:
+- Jason R. Blevins for making the LaTeX resume example that inspired this template.
 
-- Jason R. Blevins for making the LaTeX resume example that inspired this
-  template.
-
-- Christoph Frings and Andrew for their help with description list; reference
-  [enumitem: multiline label with text following label - TeX - LaTeX Stack Exchange](https://tex.stackexchange.com/questions/323903/enumitem-multiline-label-with-text-following-label).
+- LaTeX resume template for Pandoc based on Jason R. Blevins' template; http://jblevins.org/projects/cv-template/.
